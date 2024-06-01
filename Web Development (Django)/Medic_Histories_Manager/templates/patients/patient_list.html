@@ -1,0 +1,9 @@
+{% extends '_base.html' %}
+
+{% block title %}Patient List{% endblock title %}
+
+{% block content %}
+    {% for patient in patient_list %}
+        <li><a href="{{ patient.get_absolute_url }}"> {{patient.title}} </a> </li>
+    {% endfor %}
+{% endblock content %}

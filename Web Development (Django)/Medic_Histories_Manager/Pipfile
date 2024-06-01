@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+psycopg2-binary = "*"
+django-environ = "*"
+django-crispy-forms = "*"
+django-allauth = "*"
+requests = "*"
+jwt = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

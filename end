@@ -1,0 +1,41 @@
+[33mcommit 895a796d8e6f2c40918cf4cef7e56fbd070a03d3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Jose Mendoza <jetdevwork@gmail.com>
+Date:   Mon Apr 1 01:46:58 2024 -0400
+
+    Addition of new Django Project
+
+[33mcommit 4f8616a0fa61bdcebbeaf313b3dab0e357ddcc02[m
+Author: JJ <127998471+JJdevweb@users.noreply.github.com>
+Date:   Sun Mar 31 16:58:23 2024 -0400
+
+    Update README.md
+
+[33mcommit b30fedccc93974c1706b95bf70f120a12fa5957c[m
+Author: JJ <127998471+JJdevweb@users.noreply.github.com>
+Date:   Sun Mar 31 16:58:08 2024 -0400
+
+    Update README.md
+
+[33mcommit 277e3df74fe0a6472339108c03343d7b230750ee[m
+Author: JJ <127998471+JJdevweb@users.noreply.github.com>
+Date:   Sun Mar 31 16:57:42 2024 -0400
+
+    Update README.md
+    
+    Fixed some problems with the README readability
+
+[33mcommit e16ac4eb7c5beebac0e135e7c0d5216e79d2d1d5[m
+Author: JJ <127998471+JJdevweb@users.noreply.github.com>
+Date:   Sun Mar 31 16:56:33 2024 -0400
+
+    Update README.md
+    
+    Finished the basic information of the README message
+
+[33mcommit 1713a69cd5093dcebd7fddf240c13f7191452071[m
+Author: JJ <127998471+JJdevweb@users.noreply.github.com>
+Date:   Sun Mar 31 16:24:26 2024 -0400
+
+    Create README.md
+    
+    Creation of a special repository for personal information, business contacts, and other work stuff
