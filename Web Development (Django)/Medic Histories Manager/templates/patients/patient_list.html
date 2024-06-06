@@ -1,0 +1,29 @@
+{% extends '_base.html' %}
+
+{% block title %}Patient List{% endblock title %}
+
+{% block content %}
+<div class="container py-5">
+    <h2 class="text-center mb-4">Patient List</h2>
+    <div class="row">
+        {% for patient in patient_list %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">{{ patient.name }} {{ patient.lastname }}</h5>
+                    <p class="card-text">ID: {{ patient.id }}</p>
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'm_history:patient_detail' patient.id %}" class="btn btn-outline-primary">View</a>
+                        <a href="{% url 'm_history:patient_edit' patient.pk %}" class="btn btn-primary">Edit</a>
+                        <form action="{% url 'm_history:patient_delete' patient.pk %}" method="post" class="d-inline">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

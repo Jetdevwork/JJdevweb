@@ -1,0 +1,23 @@
+<!-- templates/logout.html -->
+{% extends '_base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Log Out{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card p-4 shadow-sm" style="max-width: 500px; width: 100%;">
+        <div class="card-body text-center">
+            <h1 class="card-title text-primary">Log Out</h1>
+            <p class="card-text">Are you sure you want to log out?</p>
+            <form method="post" action="{% url 'account_logout' %}">
+                {% csrf_token %}
+                <div class="d-grid gap-2">
+                    <button class="btn btn-danger" type="submit">Log Out</button>
+                    <a href="{% url 'home' %}" class="btn btn-secondary">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

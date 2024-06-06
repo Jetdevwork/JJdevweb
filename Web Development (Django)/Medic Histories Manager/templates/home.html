@@ -1,0 +1,61 @@
+{% extends '_base.html' %}
+
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero text-center py-5">
+    <div class="container">
+        <h1 class="display-4 text-dark">Welcome to the Medical History Manager</h1>
+        <p class="lead text-dark">Manage your medical histories efficiently and effortlessly.</p>
+        {% if user.is_authenticated %}
+            <p class="lead text-dark">Hi {{ user.email }}!</p>
+            <a href="{% url 'account_logout' %}" class="btn btn-primary btn-lg">Log Out</a>
+            <a href="{% url 'm_history:patient_list' %}" class="btn btn-outline-primary btn-lg ml-2">Review Patients</a>
+            <a href="{% url 'm_history:patient_add' %}" class="btn btn-outline-primary btn-lg ml-2">Add Patients</a>
+        {% else %}
+            <a href="{% url 'account_login' %}" class="btn btn-primary btn-lg">Log In</a>
+            <a href="{% url 'account_signup' %}" class="btn btn-outline-primary btn-lg ml-2">Sign Up</a>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <i class="fas fa-user-md fa-3x text-primary mb-3"></i>
+                        <h3 class="h5 text-dark">Easy Patient Management</h3>
+                        <p>Keep track of all your patients' medical histories in one place.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <i class="fas fa-calendar-alt fa-3x text-primary mb-3"></i>
+                        <h3 class="h5 text-dark">Appointment Scheduling</h3>
+                        <p>Schedule and manage appointments with ease using our integrated calendar.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card text-center h-100">
+                    <div class="card-body">
+                        <i class="fas fa-file-alt fa-3x text-primary mb-3"></i>
+                        <h3 class="h5 text-dark">Detailed Records</h3>
+                        <p>Maintain detailed records of all patient visits and treatments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock content %}

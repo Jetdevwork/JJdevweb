@@ -1,0 +1,176 @@
+/* custom-navbar.css */
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+body {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+.main-content {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for the main content */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for a lifted effect */
+    padding: 20px; /* Add some padding */
+    margin: 20px auto; /* Center the content */
+    max-width: 1200px; /* Limit the maximum width */
+    text-align: left; /* Align text to the left */
+}
+
+h2, h3 {
+    color: #003366; /* Darker blue for headers */
+}
+
+a {
+    color: #003366; /* Darker blue for links */
+}
+
+a:hover {
+    color: #0056b3; /* Slightly lighter blue on hover */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+}
+
+.nav-link:hover {
+    color: #ffcc00 !important; /* Yellow on hover for links */
+}
+
+/* Hero section styles */
+.hero {
+    background: #e3f2fd; /* Lighter background for hero section */
+    color: #000; /* Grey font color */
+    padding-top: 3rem; /* Light padding to the top */
+    padding-bottom: 3rem; /* Light padding to the bottom */
+    padding-left: 1rem; /* Light padding to the left */
+    padding-right: 1rem; /* Light padding to the right */
+}
+
+.hero .btn {
+    margin-top: 1rem;
+}
+
+/* Features section styles */
+.features {
+    background: #f8f9fa; /* Light grey background for features section */
+    color: #333333;
+}
+
+.features .fa-3x {
+    margin-bottom: 1rem;
+}
+
+/* About section styles */
+.about {
+    background: #f8f9fa;
+    color: #333333;
+    padding: 2rem 0;
+}
+
+.about h2 {
+    margin-bottom: 1rem;
+    color: #555555; /* Grey font color for about section title */
+}
+
+/* Login page styles */
+.container {
+    min-height: 100vh; /* Ensure the container takes at least full viewport height */
+}
+
+.card {
+    background: #ffffff; /* White background for the card */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for a lifted effect */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Increase the font size of the title */
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Primary blue color */
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.card {
+    background: #ffffff; /* White background for the card */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for a lifted effect */
+}
+
+.card-title {
+    font-size: 1.25rem; /* Font size for card titles */
+    color: #007bff; /* Primary blue color for titles */
+}
+
+.card-body {
+    text-align: left; /* Left-align the card body content */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Primary blue color */
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.text-primary {
+    color: #003366; /* Darker blue for headers */
+}
+
+

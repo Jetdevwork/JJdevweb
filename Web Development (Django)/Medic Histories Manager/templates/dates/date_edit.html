@@ -1,0 +1,27 @@
+{% extends '_base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Add Date{% endblock title %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="card shadow">
+        <div class="card-body">
+            <h2 class="card-title text-primary mb-4">Edit Date</h2>
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="id_description" class="form-label"></label>
+                    {{ form.description|as_crispy_field }}
+                </div>
+                <div class="mb-3">
+                    <label for="id_appointment" class="form-label">Appointment</label>
+                    <input type="datetime-local" id="id_appointment" name="appointment" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Edit</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

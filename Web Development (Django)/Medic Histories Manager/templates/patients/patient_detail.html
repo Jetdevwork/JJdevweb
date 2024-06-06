@@ -1,0 +1,129 @@
+{% extends '_base.html' %}
+
+{% block title %}{{ patient.title }}{% endblock title %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="patient-detail card shadow">
+        <div class="card-body">
+            <h2 class="card-title text-primary mb-4">Patient Details</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <div class="info-title-box badge bg-primary">ID:</div>
+                        <div class="info-detail-box bg-light">{{ patient.identification_card }}</div>
+                    </div>
+                    <div class="info-box mt-3">
+                        <div class="info-title-box badge bg-primary">Name:</div>
+                        <div class="info-detail-box bg-light">{{ patient.name }}</div>
+                    </div>
+                    <div class="info-box mt-3">
+                        <div class="info-title-box badge bg-primary">Lastname:</div>
+                        <div class="info-detail-box bg-light">{{ patient.lastname }}</div>
+                    </div>
+                    <div class="info-box mt-3">
+                        <div class="info-title-box badge bg-primary">Gender:</div>
+                        <div class="info-detail-box bg-light">{{ patient.gender }}</div>
+                    </div>
+                    <div class="info-box mt-3">
+                        <div class="info-title-box badge bg-primary">Address:</div>
+                        <div class="info-detail-box bg-light">{{ patient.address }}</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-box">
+                        <div class="info-title-box badge bg-primary">Age:</div>
+                        <div class="info-detail-box bg-light">{{ patient.age }}</div>
+                    </div>
+                    <div class="info-box mt-3">
+                        <div class="info-title-box badge bg-primary">Phone:</div>
+                        <div class="info-detail-box bg-light">{{ patient.phone }}</div>
+                    </div>
+                    <div class="info-box mt-3">
+                        <div class="info-title-box badge bg-primary">Email:</div>
+                        <div class="info-detail-box bg-light">{{ patient.email }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <a href="{% url 'm_history:history_add' patient.id %}" class="btn btn-primary">Add History</a>
+                <a href="{% url 'm_history:date_add' patient.id %}" class="btn btn-primary">Add Date</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5">
+        <h3 class="text-primary mb-4">Medic Histories</h3>
+        <ul class="list-group">
+            {% for history in patient.history.all %}
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="info-title-box badge bg-primary">Time:</div>
+                        <div class="info-detail-box bg-light">{{ history.time }}</div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="info-title-box badge bg-primary">Reason Visit:</div>
+                        <div class="info-detail-box bg-light">{{ history.reason_visit }}</div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="info-title-box badge bg-primary">Records:</div>
+                        <div class="info-detail-box bg-light">{{ history.records }}</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-title-box badge bg-primary">Current Diseases:</div>
+                        <div class="info-detail-box bg-light">{{ history.current_diseases }}</div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <div class="info-title-box badge bg-primary">Physical Exam:</div>
+                        <div class="info-detail-box bg-light">{{ history.physical_exam }}</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-title-box badge bg-primary">Diagnostic:</div>
+                        <div class="info-detail-box bg-light">{{ history.diagnostic }}</div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <div class="info-title-box badge bg-primary">Therapeutic Plan:</div>
+                        <div class="info-detail-box bg-light">{{ history.therapeutic_plan }}</div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <a href="{% url 'm_history:history_edit' history.id %}" class="btn btn-primary">Edit</a>
+                    <a href="{% url 'm_history:history_delete' history.id %}" class="btn btn-danger">Delete</a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="mt-5">
+        <h3 class="text-primary mb-4">Dates</h3>
+        <ul class="list-group">
+            {% for date in patient.date.all %}
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="info-title-box badge bg-primary">Description:</div>
+                        <div class="info-detail-box bg-light">{{ date.description }}</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="info-title-box badge bg-primary">Appointment:</div>
+                        <div class="info-detail-box bg-light">{{ date.appointment }}</div>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <a href="{% url 'm_history:date_edit' date.id %}" class="btn btn-primary">Edit</a>
+                    <a href="{% url 'm_history:date_delete' date.id %}" class="btn btn-danger">Delete</a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock content %}

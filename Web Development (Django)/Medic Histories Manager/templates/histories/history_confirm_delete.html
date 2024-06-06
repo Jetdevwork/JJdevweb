@@ -1,0 +1,16 @@
+{% extends "_base.html" %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="card shadow">
+        <div class="card-body">
+            <h2 class="card-title text-danger mb-4">Are you sure you want to delete "{{ history.title }}"?</h2>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Confirm Delete</button>
+                <a href="{% url 'm_history:patient_list' %}" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
